@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 export default function Home() {
   return (
     <>
@@ -26,13 +25,13 @@ export default function Home() {
           <div className="container">
             <div className="flex justify-around content-center gap-4">
               <div className="w-1/2 h-[400px] relative overflow-hidden rounded-2xl">
-                 <Image
-                    src="/Foto Sejarah.png"
-                    alt="Home Sejarah"
-                    fill
-                    style={{ objectFit: "cover", objectPosition: "top"}}
-                    priority
-                  />
+                <Image
+                  src="/Foto Sejarah.png"
+                  alt="Home Sejarah"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "top"}}
+                  priority
+                />
               </div>
               <div className="w-1/2">
                 {/* Title */}
