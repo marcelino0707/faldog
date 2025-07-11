@@ -11,11 +11,15 @@ export default function Footer() {
             style={{ objectFit: "cover", objectPosition: "center" }}
             priority
             />
-            <div className="absolute inset-0 flex items-center justify-start px-10">
-            <h2 className="text-white text-lg font-medium max-w-md">
-                Kami hadir untuk memberikan kepuasaan kepada pelanggan dan{" "}
-                <strong className="font-bold">Masyarakat</strong>
-            </h2>
+            <div className="absolute inset-0 flex items-center justify-around w-full">
+                <h2 className="text-white text-lg font-medium max-w-md">
+                    Kami hadir untuk memberikan kepuasaan kepada pelanggan dan{" "}
+                    <strong className="font-bold">Masyarakat</strong>
+                </h2>
+                <h2 className="text-white text-lg font-medium max-w-md">
+                    Kami hadir untuk memberikan kepuasaan kepada pelanggan dan{" "}
+                    <strong className="font-bold">Masyarakat</strong>
+                </h2>
             </div>
         </div>
         </footer>
