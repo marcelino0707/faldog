@@ -56,8 +56,8 @@ export default function Home() {
               style={{ objectFit: "cover", objectPosition: "top"}}
               priority
             />
-            <div className="absolute items-center inset-0 flex flex-col">
-                <h1>Servis Kami</h1>
+            <div className="absolute text-white items-center inset-0 flex flex-col">
+                <h1 className="font-bold items-start">Servis Kami</h1>
                 <div className="grid grid-cols-3 gap-4 max-w-5xl w-full">
                   <div className="w-full h-[300px] relative overflow-hidden rounded-2xl">
                     <Image
@@ -98,6 +98,23 @@ export default function Home() {
                 </div>
             </div>
           </div>
+        </div>
+        {/* Hero 4 */}
+        <div className="justify-around w-full h-full mb-4 text-[#07A6E1] items-center inset-0 flex flex-col">
+            <h1 className="font-bold items-start">Servis Kami</h1>
+            <div className="grid grid-cols-3 gap-4 max-w-5xl w-full">
+              {[1, 2, 3, 4, 5, 6].map((icon) => (
+                <div key={icon} className="w-full h-[300px] relative">
+                    <Image
+                        src={`/news/Image News ${icon}.png`}
+                        alt={`icon-${icon}`}
+                        fill
+                        style={{ objectFit: "contain" }}
+                        priority
+                    />
+                </div>
+              ))}
+            </div>
         </div>
       </section>
     </>
