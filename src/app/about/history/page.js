@@ -1,13 +1,13 @@
 import Image from "next/image";
 export default function History() {
     return (
-    <div className="relative w-full h-[600px]">
+    <div className="relative w-full h-[760px]">
       {/* Background Image */}
       <Image
         src="/sejarah.png"
         alt="Sejarah Perusahaan"
         fill
-        style={{ objectFit: "cover" }}
+        style={{ objectFit: "cover", objectPosition: "top"  }}
         className="opacity-60"
         priority
       />

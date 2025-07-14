@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export default function VisionMission() {
   return (
-    <div className="relative w-full h-[600px]">
+    <div className="relative w-full h-[760px]">
       {/* Background Image */}
       <Image
         src="/visi-misi.png"
         alt="Visi Misi Perusahaan"
         fill
-        style={{ objectFit: "cover" }}
+        style={{ objectFit: "cover", objectPosition: "top" }}
         className="opacity-60"
         priority
       />
