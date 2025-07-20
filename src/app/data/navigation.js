@@ -3,9 +3,9 @@ export const navigation = [
     {   name: "Tentang Kami", 
         href: "/about",
         children: [
-            { name: 'Sejarah', href: '#history' },
-            { name: 'Struktur Organisasi', href: '#organizational-structure' },
-            { name: 'Visi dan Misi', href: '#vision-mission' }
+            { name: 'Sejarah', href: '/history' },
+            { name: 'Visi dan Misi', href: '/vision-mission' },
+            { name: 'Struktur Organisasi', href: '/organizational-structure' }
         ]
     },
     { name: "Servis", href: "/service" },

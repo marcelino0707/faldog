@@ -78,12 +78,33 @@ export default function Navbar() {
                     <div className="hidden md:flex space-x-4 text-l gap-5 font-bold relative items-center">
                         {navigation.map((item) => (
                             <div key={item.name} className="relative group h-full flex items-center">
-                                <Link
-                                    href={item.href}
-                                    className={`text-[#808384] hover:underline ${isActive(item.href) ? "text-[#30323D]" : ""}`}
-                                >
-                                    {item.name}
-                                </Link>
+                                {item.children ? (
+                                    <span
+                                        className={`${isActive(item.href) ? "text-[#30323D]" : "text-[#808384]"} cursor-default pointer-events-none`}
+                                    >
+                                        {item.name}
+                                    </span>
+                                ) : (
+                                    <Link
+                                        href={item.href}
+                                        className={`hover:underline ${isActive(item.href) ? "text-[#30323D]" : "text-[#808384]"}`}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                )}
+                                {item.children && (
+                                    <div className="absolute top-full left-0 w-56 bg-[#0a1c29] text-white rounded-md shadow-lg opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300 z-50">
+                                        {item.children.map((child) => (
+                                            <Link
+                                                key={child.name}
+                                                href={`${item.href}${child.href}`} // ex: /about#history
+                                                className="block px-4 py-2 hover:bg-gray-800 text-sm border-b border-gray-700 last:border-none"
+                                            >
+                                                {child.name}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>
@@ -99,12 +120,21 @@ export default function Navbar() {
                             return (
                                 <div key={item.name} className="relative border-b border-gray-700">
                                     <div className="w-full text-left px-4 py-3 flex justify-between items-center font-semibold hover:bg-gray-900 transition">
-                                        <Link
-                                            href={item.href}
-                                            className={`block w-full text-left ${isActive(item.href) ? "text-green-500" : ""}`}
-                                        >
-                                            {item.name}
-                                        </Link>
+                                        {item.children ? (
+                                            <span
+                                                className={`block w-full text-left ${isActive(item.href) ? "text-green-500" : ""} cursor-default pointer-events-none`}
+                                            >
+                                                {item.name}
+                                            </span>
+                                        ) : (
+                                            <Link
+                                                href={item.href}
+                                                className={`block w-full text-left ${isActive(item.href) ? "text-green-500" : ""}`}
+                                                onClick={() => setIsMenuOpen(false)}
+                                            >
+                                                {item.name}
+                                            </Link>
+                                        )}
                                         {item.children && (
                                             <button
                                                 onClick={() => setActiveDropdown(isActiveDropdown ? null : item.name)}
@@ -124,8 +154,9 @@ export default function Navbar() {
                                             {item.children.map((child, index) => (
                                                 <Link
                                                     key={child.name}
-                                                    href={child.href}
+                                                    href={`${item.href}${child.href}`}
                                                     className={`px-6 py-2 text-sm border-t border-gray-700 hover:bg-gray-800 ${index === 0 ? "border-t" : ""}`}
+                                                    onClick={() => setIsMenuOpen(false)} 
                                                 >
                                                     {child.name}
                                                 </Link>

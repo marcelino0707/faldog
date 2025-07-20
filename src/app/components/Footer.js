@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Footer() {
     return (
         <footer className="relative">
-        <div className="w-full h-[360px] overflow-hidden mb-4 relative">
+        <div className="w-full h-[360px] overflow-hidden relative">
             <Image
                 src="/footer.png"
                 alt="Home BG"

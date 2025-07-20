@@ -1,7 +1,8 @@
 export const services = [
     { 
         slug: "1",
-        image: "/news-child/1.png",
+        mini_image: "/services/image 1.png",
+        image: "/service-detail/1.png",
         title: "Pekerjaan Tanah", 
         subtitle: "Jasa Pekerjaan Tanah: Fondasi Sukses untuk Setiap Proyek Konstruksi",
         first_content: "Pekerjaan tanah merupakan langkah awal yang sangat penting dalam setiap proyek konstruksi. Ini adalah proses persiapan lahan yang memerlukan perencanaan matang, peralatan yang tepat, serta tenaga ahli yang berpengalaman. Di perusahaan kami, kami memahami bahwa kualitas pekerjaan tanah akan memengaruhi kesuksesan dan keamanan bangunan atau infrastruktur yang dibangun di atasnya. Oleh karena itu, kami menawarkan layanan pekerjaan tanah profesional yang dirancang untuk memastikan bahwa setiap proyek dimulai dengan dasar yang kuat dan stabil.",
@@ -9,7 +10,8 @@ export const services = [
     },
     { 
         slug: "2",
-        image: "/news-child/2.png",
+        mini_image: "/services/image 2.png",
+        image: "/service-detail/2.png",
         title: "Pekerjaan Pondasi", 
         subtitle: "Jasa Pekerjaan Pondasi: Solusi Konstruksi Tangguh untuk Fondasi yang Kuat dan Tahan Lama",
         first_content: "Pekerjaan pondasi merupakan aspek fundamental dalam setiap proyek konstruksi, baik untuk bangunan, jembatan, jalan, maupun infrastruktur berat lainnya. Sebagai elemen dasar dari struktur bangunan, pondasi harus mampu menopang seluruh beban di atasnya dengan stabil dan aman. Di sinilah peran penting jasa pekerjaan pondasi yang kami tawarkan. Dengan pengalaman dan keahlian yang mendalam, perusahaan kami menyediakan solusi pondasi yang andal, inovatif, dan sesuai dengan kebutuhan spesifik setiap proyek.",
@@ -17,7 +19,8 @@ export const services = [
     },
     {
         slug: "3",
-        image: "/news-child/3.png",
+        mini_image: "/services/image 3.png",
+        image: "/service-detail/3.png",
         title: "Pekerjaan Beton",
         subtitle: "Jasa Pekerjaan Beton: Kualitas Konstruksi Tangguh dengan Beton Berkualitas Tinggi",
         first_content: "Pekerjaan pondasi merupakan aspek fundamental dalam setiap proyek konstruksi, baik untuk bangunan, jembatan, jalan, maupun infrastruktur berat lainnya. Sebagai elemen dasar dari struktur bangunan, pondasi harus mampu menopang seluruh beban di atasnya dengan stabil dan aman. Di sinilah peran penting jasa pekerjaan pondasi yang kami tawarkan. Dengan pengalaman dan keahlian yang mendalam, perusahaan kami menyediakan solusi pondasi yang andal, inovatif, dan sesuai dengan kebutuhan spesifik setiap proyek.",
@@ -25,7 +28,8 @@ export const services = [
     },
     {
         slug: "4",
-        image: "/news-child/4.png",
+        mini_image: "/services/image 4.png",
+        image: "/service-detail/4.png",
         title: "Pekerjaan Pengaspalan",
         subtitle: "Jasa Pekerjaan Pengaspalan: Solusi Jalan yang Kuat, Tahan Lama, dan Berkualitas Tinggi",
         first_content: "Pengaspalan adalah proses penting dalam membangun dan memperbaiki infrastruktur jalan, lapangan parkir, area industri, dan berbagai fasilitas umum lainnya. Kualitas pengaspalan sangat menentukan daya tahan, keamanan, serta kenyamanan jalan atau area yang dilapisi aspal. Sebagai perusahaan yang berfokus pada konstruksi infrastruktur, kami menyediakan jasa pengaspalan profesional dengan standar tinggi dan teknologi mutakhir untuk memastikan hasil yang kuat, halus, dan tahan lama.",
@@ -33,7 +37,8 @@ export const services = [
     },
     {
         slug: "5",
-        image: "/news-child/5.png",
+        mini_image: "/services/image 5.png",
+        image: "/service-detail/5.png",
         title: "Penyiapan Lahan Konstruksi",
         subtitle: "Jasa Penyiapan Lahan Konstruksi: Fondasi Awal untuk Kesuksesan Proyek Anda",
         first_content: "Pengaspalan adalah proses penting dalam membangun dan memperbaiki infrastruktur jalan, lapangan parkir, area industri, dan berbagai fasilitas umum lainnya. Kualitas pengaspalan sangat menentukan daya tahan, keamanan, serta kenyamanan jalan atau area yang dilapisi aspal. Sebagai perusahaan yang berfokus pada konstruksi infrastruktur, kami menyediakan jasa pengaspalan profesional dengan standar tinggi dan teknologi mutakhir untuk memastikan hasil yang kuat, halus, dan tahan lama.",
@@ -41,7 +46,8 @@ export const services = [
     },
     {
         slug: "6",
-        image: "/news-child/6.png",
+        mini_image: "/services/image 6.png",
+        image: "/service-detail/6.png",
         title: "Penyiapan dan Pematangan Tanah",
         subtitle: "Jasa Penyiapan dan Pematangan Tanah: Fondasi Kuat untuk Proyek Konstruksi Anda",
         first_content: "Penyiapan dan pematangan tanah adalah tahap awal yang sangat penting dalam setiap proyek konstruksi. Proses ini memastikan bahwa tanah di lokasi proyek memiliki stabilitas, kekuatan, dan kondisi optimal untuk mendukung pembangunan yang aman dan efisien. Sebagai perusahaan berpengalaman di bidang konstruksi, kami menyediakan layanan penyiapan dan pematangan tanah yang komprehensif, mencakup berbagai pekerjaan teknis untuk memastikan bahwa tanah siap digunakan dan sesuai dengan spesifikasi proyek.",
@@ -49,7 +55,8 @@ export const services = [
     },
     {
         slug: "7",
-        image: "/news-child/7.png",
+        mini_image: "/services/image 7.png",
+        image: "/service-detail/7.png",
         title: "Supplier",
         subtitle: "Jasa Supplier Material Konstruksi: Menyediakan Bahan Berkualitas untuk Keberhasilan Proyek Anda",
         first_content: "Dalam setiap proyek konstruksi, ketersediaan material yang berkualitas menjadi kunci utama untuk memastikan bahwa pembangunan berjalan lancar, tepat waktu, dan menghasilkan struktur yang kuat serta tahan lama. Sebagai penyedia bahan konstruksi terpercaya, kami menawarkan berbagai jenis material berkualitas tinggi yang siap mendukung kebutuhan proyek Anda. Mulai dari bahan dasar seperti semen, pasir, dan batu, hingga material khusus seperti beton pracetak dan baja, kami menyediakan solusi lengkap untuk memenuhi kebutuhan konstruksi Anda.",
@@ -57,7 +64,8 @@ export const services = [
     },
     {
         slug: "8",
-        image: "/news-child/8.png",
+        mini_image: "/services/image 8.png",
+        image: "/service-detail/8.png",
         title: "Heavy Duty Rental",
         subtitle: "Jasa Heavy Duty Rental: Solusi Sewa Alat Berat untuk Proyek Konstruksi Anda",
         first_content: "Dalam dunia konstruksi dan infrastruktur, penggunaan alat berat sangat penting untuk mempercepat dan mempermudah pekerjaan di lapangan. Proyek-proyek besar, seperti pembangunan jalan, gedung bertingkat, kawasan industri, hingga pengembangan infrastruktur publik, membutuhkan peralatan yang tepat agar pekerjaan dapat diselesaikan dengan efisien, aman, dan sesuai dengan tenggat waktu. Melalui jasa Heavy Duty Rental, kami menyediakan solusi sewa alat berat yang handal untuk mendukung berbagai jenis proyek konstruksi Anda.",
