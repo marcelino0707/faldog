@@ -38,7 +38,7 @@ export default function News() {
                     <Link
                     key={item.slug}
                     href={`/news/${item.slug}`}
-                    className="w-[300px] h-[300px] relative overflow-hidden rounded-2xl shadow-lg group"
+                    className="w-[400px] h-[400px] relative overflow-hidden rounded-2xl shadow-lg group"
                     >
                     <Image
                         src={item.mini_image}
