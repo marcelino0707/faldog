@@ -90,8 +90,7 @@ export default function Service() {
                         "Pekerjaan Beton",
                         "Pekerjaan Pengaspalan",
                         "Penyiapan Lahan Konstruksi",
-                        "Pekerjaan Pagar",
-                        "Pekerjaan Pemadatan"
+                        "Penyiapan dan Pematangan Tanah",
                     ].map((item, index) => {
                         const matchedService = services.find(service => service.title === item);
                         return matchedService ? (
@@ -133,18 +132,18 @@ export default function Service() {
                             const matchedService = services.find(service => service.title === item);
                             return matchedService ? (
                                 <Link
-                                key={index}
-                                href={`/service/${matchedService.slug}`}
-                                className="inline-block bg-gray-200 text-sm text-gray-800 px-4 py-1 rounded-full hover:bg-gray-300 transition"
-                                >
-                                {item}
+                                    key={index}
+                                    href={`/service/${matchedService.slug}`}
+                                    className="inline-block bg-gray-200 text-sm text-gray-800 px-4 py-1 rounded-full hover:bg-gray-300 transition"
+                                    >
+                                    {item}
                                 </Link>
                             ) : (
                                 <span
-                                key={index}
-                                className="inline-block bg-gray-100 text-sm text-gray-400 px-4 py-1 rounded-full"
-                                >
-                                {item}
+                                    key={index}
+                                    className="inline-block bg-gray-100 text-sm text-gray-400 px-4 py-1 rounded-full"
+                                    >
+                                    {item}
                                 </span>
                             );
                         })}
