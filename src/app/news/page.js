@@ -38,7 +38,7 @@ export default function News() {
                     <Link
                     key={item.slug}
                     href={`/news/${item.slug}`}
-                    className="w-[400px] h-[400px] relative overflow-hidden rounded-2xl shadow-lg group"
+                    className="w-[300px] h-[300px] relative overflow-hidden rounded-2xl shadow-lg group"
                     >
                     <Image
                         src={item.mini_image}
@@ -58,7 +58,7 @@ export default function News() {
                 {!showAllNews && news.length > 6 && (
                 <button
                     onClick={() => setShowAllNews(true)}
-                    className="mt-10 px-6 py-3 bg-[#E8C547] text-white font-bold rounded-full self-center hover:bg-[#0595c9] transition block mx-auto"
+                    className="mt-10 px-6 py-3 bg-[#E8C547] text-white font-bold rounded-full self-center hover:bg-[#F4B400] transition block mx-auto"
                 >
                     Lebih Banyak Berita
                 </button>
