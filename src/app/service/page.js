@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { services } from "../data/services";
 export default function Service() {
     return (
         <>
@@ -26,13 +28,13 @@ export default function Service() {
                 <div className="flex items-center justify-center bg-white px-10 py-12">
                 <div className="max-w-md">
                     <h3 className="text-xl md:text-2xl font-bold text-black mb-4">
-                    Mitra Anda Dalam Konstruksi
+                        Mitra Anda Dalam Konstruksi
                     </h3>
                     <p className="text-gray-700 text-base leading-relaxed">
-                    Perusahaan kami bersedia dan merasa mampu dalam bentuk penanganan
-                    pekerjaan di bidang Pertambangan, Kontraktor, Supplier, Jasa, Heavy
-                    Duty Rental, General Trading, Perusahaan Bongkar Muat (PBM) dan
-                    Jasa umum lainnya.
+                        Perusahaan kami bersedia dan merasa mampu dalam bentuk penanganan
+                        pekerjaan di bidang Pertambangan, Kontraktor, Supplier, Jasa, Heavy
+                        Duty Rental, General Trading, Perusahaan Bongkar Muat (PBM) dan
+                        Jasa umum lainnya.
                     </p>
                 </div>
                 </div>
@@ -69,15 +71,15 @@ export default function Service() {
                 <div className="flex items-center justify-center bg-white px-10 py-12">
                 <div className="max-w-md">
                     <h3 className="text-xl md:text-2xl font-bold text-black mb-4">
-                    Jasa Pendukung
+                        Jasa Pendukung
                     </h3>
                     <p className="text-gray-700 text-base leading-relaxed mb-6">
-                    PT Lingga Jaya Perkasa Line memiliki lini bisnis jasa yang
-                    melingkupi portfolio utama korporasi, dimulai dari jasa-jasa
-                    pekerjaan tanah, pekerjaan pondasi serta penyiapan lahan
-                    konstruksi dengan didukung pengalaman dan utilitas yang telah
-                    teruji yang menjadikan kami adaptif dalam menangani kondisi
-                    di lapangan dan kebutuhan masyarakat dalam negeri.
+                        PT Lingga Jaya Perkasa Line memiliki lini bisnis jasa yang
+                        melingkupi portfolio utama korporasi, dimulai dari jasa-jasa
+                        pekerjaan tanah, pekerjaan pondasi serta penyiapan lahan
+                        konstruksi dengan didukung pengalaman dan utilitas yang telah
+                        teruji yang menjadikan kami adaptif dalam menangani kondisi
+                        di lapangan dan kebutuhan masyarakat dalam negeri.
                     </p>
 
                     {/* Badges */}
@@ -90,14 +92,26 @@ export default function Service() {
                         "Penyiapan Lahan Konstruksi",
                         "Pekerjaan Pagar",
                         "Pekerjaan Pemadatan"
-                    ].map((item, index) => (
-                        <span
-                        key={index}
-                        className="inline-block bg-gray-200 text-sm text-gray-800 px-4 py-1 rounded-full"
-                        >
-                        {item}
-                        </span>
-                    ))}
+                    ].map((item, index) => {
+                        const matchedService = services.find(service => service.title === item);
+                        return matchedService ? (
+                            <Link
+                            key={index}
+                            href={`/service/${matchedService.slug}`}
+                            className="inline-block bg-gray-200 text-sm text-gray-800 px-4 py-1 rounded-full hover:bg-gray-300 transition"
+                            >
+                            {item}
+                            </Link>
+                        ) : (
+                            <span
+                            key={index}
+                            className="inline-block bg-gray-100 text-sm text-gray-400 px-4 py-1 rounded-full"
+                            title="No link available"
+                            >
+                            {item}
+                            </span>
+                        );
+                    })}
                     </div>
                 </div>
                 </div>
@@ -115,14 +129,25 @@ export default function Service() {
 
                     {/* Badges */}
                     <div className="flex flex-wrap gap-2">
-                        {["Supplier", "Heavy Duty Rental"].map((item, index) => (
-                        <span
-                            key={index}
-                            className="inline-block bg-gray-200 text-sm text-gray-800 px-4 py-1 rounded-full"
-                        >
-                            {item}
-                        </span>
-                        ))}
+                        {["Supplier", "Heavy Duty Rental"].map((item, index) =>{
+                            const matchedService = services.find(service => service.title === item);
+                            return matchedService ? (
+                                <Link
+                                key={index}
+                                href={`/service/${matchedService.slug}`}
+                                className="inline-block bg-gray-200 text-sm text-gray-800 px-4 py-1 rounded-full hover:bg-gray-300 transition"
+                                >
+                                {item}
+                                </Link>
+                            ) : (
+                                <span
+                                key={index}
+                                className="inline-block bg-gray-100 text-sm text-gray-400 px-4 py-1 rounded-full"
+                                >
+                                {item}
+                                </span>
+                            );
+                        })}
                     </div>
                     </div>
                 </div>

@@ -138,7 +138,7 @@ export default function Home() {
             {!showAllNews && news.length > 6 && (
               <button
                 onClick={() => setShowAllNews(true)}
-                className="mt-10 px-6 py-3 bg-[#07A6E1] text-white font-bold rounded-full self-center hover:bg-[#0595c9] transition block mx-auto"
+                className="mt-10 px-6 py-3 bg-[#E8C547] text-white font-bold rounded-full self-center hover:bg-[#0595c9] transition block mx-auto"
               >
                 Lebih Banyak Berita
               </button>
