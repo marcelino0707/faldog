@@ -59,7 +59,7 @@ export default function Contact() {
                     </div>
                 </div>
             </section>
-            <section className="container mx-auto h-[760px] px-4 md:px-12 py-10">
+            <section className="container mx-auto h-min-[760px] px-4 md:px-12 py-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {/* Kiri: Informasi kantor */}
                     <div className="px-20">
@@ -122,9 +122,9 @@ export default function Contact() {
 
                                     <button
                                         type="submit"
-                                        className="mt-6 bg-[#E8C547] text-sm font-semibold text-white px-6 py-2 rounded-md shadow hover:scale-105 transition w-30"
+                                        className="mt-6 bg-[#E8C547] text-sm font-semibold text-white px-6 py-2 rounded-md shadow hover:scale-105 transition w-30 block mx-auto md:mx-0"
                                     >
-                                        Kirim
+                                    Kirim
                                     </button>
                                 </form>
                             </>
