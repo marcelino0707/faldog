@@ -6,7 +6,7 @@ export default function Service() {
     return (
         <>
         {/* Hero */}
-        <section className="w-full relative min-h-[450px]  md:h-[600px] overflow-hidden">
+        <section className="w-full relative min-h-[450px] md:h-[600px] overflow-hidden md:rounded-none">
             <Image
             src="/service-hero.png"
             alt="hero service"
@@ -22,10 +22,15 @@ export default function Service() {
                 </h2>
             </div>
             </div>
+            <div className="sm:hidden absolute bottom-0 w-full overflow-hidden leading-none rotate-180 z-20">
+                <svg viewBox="0 0 500 50" preserveAspectRatio="none" className="w-full h-10">
+                    <path d="M0,0 C150,50 350,0 500,50 L500,00 L0,0 Z" className="fill-white"></path>
+                </svg>
+            </div>
         </section>
 
         {/* Section 1 */}
-        <section className="w-full flex flex-col md:grid md:grid-cols-2 min-h-[450px]">
+        <section className="w-full flex flex-col md:grid md:grid-cols-2 min-h-[450px] mt-6 md:mt-0">
             <div className="order-2 md:order-1 flex items-center justify-center bg-white px-6 md:px-10 py-10 md:py-12">
             <div className="max-w-md">
                 <h3 className="text-xl md:text-2xl font-bold text-black mb-4">

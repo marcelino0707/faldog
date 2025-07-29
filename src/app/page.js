@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/app/data/services";
@@ -12,15 +12,31 @@ export default function Home() {
   const visibleServices = showAllService ? services : services.slice(0, 6);
   const visibleNews = showAllNews ? news : news.slice(0, 6);
 
-  const serviceSliderRef = useRef(null);
   const newsSliderRef = useRef(null);
 
-  const scrollSlider = (ref, direction) => {
-    if (ref.current) {
-      const scrollAmount = direction === "left" ? -300 : 300;
-      ref.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
+  const autoScrollRef = useRef(null);
+
+  const startAutoScroll = () => {
+    autoScrollRef.current = setInterval(() => {
+      if (newsSliderRef.current) {
+        newsSliderRef.current.scrollBy({
+          left: 320,
+          behavior: "smooth",
+        });
+
+        // Loop back to start if reached end
+        const { scrollLeft, scrollWidth, clientWidth } = newsSliderRef.current;
+        if (scrollLeft + clientWidth >= scrollWidth) {
+          newsSliderRef.current.scrollTo({ left: 0, behavior: "smooth" });
+        }
+      }
+    }, 2000);
   };
+
+  useEffect(() => {
+    startAutoScroll();
+    return () => clearInterval(autoScrollRef.current);
+  }, []);
 
   return (
     <>
@@ -79,7 +95,7 @@ export default function Home() {
       </div>
         {/* Hero 3 */}
         <div className="relative flex justify-around w-full h-full">
-          <div className={`relative w-full overflow-hidden ${showAllService ? "h-[1100px]" : "h-[900px]"}`}>
+          <div className={`relative w-full overflow-hidden ${showAllService ? "h-[1400px] md:h-[1100px]" : "h-[1200px] md:h-[900px]"}`}>
             <Image
               src="/Gambar Servis Kami.png"
               alt="Servis Kami"
@@ -88,14 +104,14 @@ export default function Home() {
               priority
             />
           <div className="absolute inset-0 bg-black/60 z-[1]" />
-            <div className="absolute inset-0 z-[2] flex flex-col py-10 px-10 text-white">
+            <div className="absolute inset-0 z-[2] flex flex-col py-10 text-white">
                 <h1 className="font-extrabold text-3xl mb-5">Servis Kami</h1>
                 <div className="grid grid-cols-2 gap-4 lg:hidden px-4">
                   {visibleServices.map((service) => (
                     <Link
                       key={service.slug}
                       href={`/service/${service.slug}`}
-                      className="w-full h-[180px] relative overflow-hidden rounded-2xl group shadow-lg"
+                      className="w-full h-[300px] relative overflow-hidden rounded-2xl group shadow-lg"
                     >
                       <Image
                         src={service.mini_image}
@@ -105,8 +121,8 @@ export default function Home() {
                         className="group-hover:scale-110 transition-transform duration-500"
                         priority
                       />
-                      <div className="absolute inset-0 flex items-center justify-center px-2 text-center">
-                        <p className="text-white font-bold text-sm sm:text-base">{service.title}</p>
+                      <div className="absolute inset-0 flex items-start justify-start px-2 py-6 pl-4">
+                        <p className="text-white font-bold text-xl">{service.title}</p>
                       </div>
                     </Link>
                   ))}
@@ -147,27 +163,23 @@ export default function Home() {
         </div>
         {/* Hero 4 */}
         <div className="relative w-full h-full text-white">
-            <div className="relative w-full h-full bg-white py-10 px-20">
+          <div className="relative w-full h-full bg-white py-10 px-4 lg:px-20">
             <h1 className="text-[#07A6E1] font-bold text-3xl mb-8">Berita Terkini</h1>
-            {/* Mobile Slider */}
-            <div className="lg:hidden relative">
-              {/* Left Arrow */}
-              <button
-                onClick={() => scrollSlider(newsSliderRef, "left")}
-                className="absolute -left-8 top-1/2 -translate-y-1/2 z-10 bg-white text-black rounded-full p-2 shadow"
-              >
-                ◀
-              </button>
 
+            {/* Desktop (auto scroll horizontal with snap-x) */}
+            <div className="hidden sm:block relative">
+              {/* Snap Slider */}
               <div
                 ref={newsSliderRef}
                 className="flex gap-4 overflow-x-auto snap-x scroll-smooth pb-4"
+                onMouseEnter={() => clearInterval(autoScrollRef.current)}
+                onMouseLeave={startAutoScroll}
               >
                 {visibleNews.map((item) => (
                   <Link
                     key={item.slug}
                     href={`/news/${item.slug}`}
-                    className="min-w-[280px] h-[280px] flex-shrink-0 relative overflow-hidden rounded-2xl group snap-start shadow-lg"
+                    className="min-w-[300px] h-[300px] flex-shrink-0 relative overflow-hidden rounded-2xl group snap-start shadow-lg"
                   >
                     <Image
                       src={item.mini_image}
@@ -183,23 +195,15 @@ export default function Home() {
                   </Link>
                 ))}
               </div>
+            </div>
 
-              {/* Right Arrow */}
-              <button 
-                onClick={() => scrollSlider(newsSliderRef, "right")}
-                className="absolute -right-8 top-1/2 -translate-y-1/2 z-10 bg-white text-black rounded-full p-2 shadow"
-              >
-                ▶
-              </button>
-            </div>  
-
-            {/* Desktop Grid */}
-            <div className="hidden lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
+            {/* Mobile (grid 2x2) */}
+            <div className="grid grid-cols-2 gap-2 sm:hidden">
               {visibleNews.map((item) => (
                 <Link
                   key={item.slug}
                   href={`/news/${item.slug}`}
-                  className="w-[300px] h-[300px] relative overflow-hidden rounded-2xl shadow-lg group"
+                  className="w-full h-[300px] relative overflow-hidden rounded-2xl shadow-lg group"
                 >
                   <Image
                     src={item.mini_image}
@@ -209,23 +213,25 @@ export default function Home() {
                     className="group-hover:scale-110 transition-transform duration-500"
                     priority
                   />
-                  <div className="absolute bottom-0 left-0 w-full bg-black/60 py-2 px-4">
-                    <p className="text-white font-semibold text-center">{item.title}</p>
+                  <div className="absolute bottom-0 left-0 w-full bg-black/60 py-1 px-2">
+                    <p className="text-white text-sm font-semibold text-center">{item.title}</p>
                   </div>
                 </Link>
               ))}
             </div>
 
+            {/* Tombol Lebih Banyak Berita */}
             {!showAllNews && news.length > 6 && (
               <button
                 onClick={() => setShowAllNews(true)}
-                className="mt-10 px-6 py-3 bg-[#E8C547] text-white font-bold rounded-full self-center hover:bg-[#F4B400] transition block mx-auto hidden lg:block"
+                className="sm:hidden mt-10 px-6 py-3 bg-[#E8C547] text-white font-bold rounded-full self-center hover:bg-[#F4B400] transition block mx-auto"
               >
                 Lebih Banyak Berita
               </button>
             )}
           </div>
         </div>
+
       </section>
     </>
   );

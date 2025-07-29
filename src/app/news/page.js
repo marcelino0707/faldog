@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,13 +10,25 @@ export default function News() {
     const visibleNews = showAllNews ? news : news.slice(0, 6);
 
     const newsSliderRef = useRef(null);
-    const scrollSlider = (ref, direction) => {
-    if (ref.current) {
-            const scrollAmount = direction === "left" ? -300 : 300;
-            ref.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-        }
-    };
+    const autoScrollRef = useRef(null);
 
+    const startAutoScroll = () => {
+        autoScrollRef.current = setInterval(() => {
+        if (newsSliderRef.current) {
+            newsSliderRef.current.scrollBy({
+            left: 320,
+            behavior: "smooth",
+            });
+
+            // Loop back to start if reached end
+            const { scrollLeft, scrollWidth, clientWidth } = newsSliderRef.current;
+            if (scrollLeft + clientWidth >= scrollWidth) {
+            newsSliderRef.current.scrollTo({ left: 0, behavior: "smooth" });
+            }
+        }
+        }, 2000);
+    };
+    
     return (
         <>
             <section className="w-full relative h-[400px] overflow-hidden mb-10">
@@ -39,28 +51,23 @@ export default function News() {
                 </div>
             </section>
             <section className="relative w-full h-full text-white">
-                <div className="relative w-full h-full bg-white py-10 px-20">
+                <div className="relative w-full h-full bg-white py-10 px-4 lg:px-20">
                 <h1 className="text-[#07A6E1] font-bold text-3xl mb-8">Berita Terkini</h1>
 
-                {/* Mobile Slider */}
-                <div className="lg:hidden relative">
-                {/* Left Arrow */}
-                <button
-                    onClick={() => scrollSlider(newsSliderRef, "left")}
-                    className="absolute -left-8 top-1/2 -translate-y-1/2 z-10 bg-white text-black rounded-full p-2 shadow"
-                >
-                    ◀
-                </button>
-
+                {/* Desktop (auto scroll horizontal with snap-x) */}
+                <div className="hidden sm:block relative">
+                {/* Snap Slider */}
                 <div
                     ref={newsSliderRef}
                     className="flex gap-4 overflow-x-auto snap-x scroll-smooth pb-4"
+                    onMouseEnter={() => clearInterval(autoScrollRef.current)}
+                    onMouseLeave={startAutoScroll}
                 >
                     {visibleNews.map((item) => (
                     <Link
                         key={item.slug}
                         href={`/news/${item.slug}`}
-                        className="min-w-[280px] h-[280px] flex-shrink-0 relative overflow-hidden rounded-2xl group snap-start shadow-lg"
+                        className="min-w-[300px] h-[300px] flex-shrink-0 relative overflow-hidden rounded-2xl group snap-start shadow-lg"
                     >
                         <Image
                         src={item.mini_image}
@@ -76,23 +83,15 @@ export default function News() {
                     </Link>
                     ))}
                 </div>
+                </div>
 
-                {/* Right Arrow */}
-                <button 
-                    onClick={() => scrollSlider(newsSliderRef, "right")}
-                    className="absolute -right-8 top-1/2 -translate-y-1/2 z-10 bg-white text-black rounded-full p-2 shadow"
-                >
-                    ▶
-                </button>
-                </div>  
-
-                {/* Desktop Grid */}
-                <div className="hidden lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
+                {/* Mobile (grid 2x2) */}
+                <div className="grid grid-cols-2 gap-2 sm:hidden">
                 {visibleNews.map((item) => (
                     <Link
                     key={item.slug}
                     href={`/news/${item.slug}`}
-                    className="w-[300px] h-[300px] relative overflow-hidden rounded-2xl shadow-lg group"
+                    className="w-full h-[300px] relative overflow-hidden rounded-2xl shadow-lg group"
                     >
                     <Image
                         src={item.mini_image}
@@ -102,17 +101,18 @@ export default function News() {
                         className="group-hover:scale-110 transition-transform duration-500"
                         priority
                     />
-                    <div className="absolute bottom-0 left-0 w-full bg-black/60 py-2 px-4">
-                        <p className="text-white font-semibold text-center">{item.title}</p>
+                    <div className="absolute bottom-0 left-0 w-full bg-black/60 py-1 px-2">
+                        <p className="text-white text-sm font-semibold text-center">{item.title}</p>
                     </div>
                     </Link>
                 ))}
                 </div>
 
+                {/* Tombol Lebih Banyak Berita */}
                 {!showAllNews && news.length > 6 && (
                 <button
                     onClick={() => setShowAllNews(true)}
-                    className="mt-10 px-6 py-3 bg-[#E8C547] text-white font-bold rounded-full self-center hover:bg-[#F4B400] transition block mx-auto hidden lg:block"
+                    className="sm:hidden mt-10 px-6 py-3 bg-[#E8C547] text-white font-bold rounded-full self-center hover:bg-[#F4B400] transition block mx-auto"
                 >
                     Lebih Banyak Berita
                 </button>
