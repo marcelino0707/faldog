@@ -105,7 +105,7 @@ export default function Home() {
             />
           <div className="absolute inset-0 bg-black/60 z-[1]" />
             <div className="absolute inset-0 z-[2] flex flex-col py-10 text-white">
-                <h1 className="font-extrabold text-3xl mb-5">Servis Kami</h1>
+                <h1 className="font-extrabold text-3xl mb-5 px-20">Servis Kami</h1>
                 <div className="grid grid-cols-2 gap-4 lg:hidden px-4">
                   {visibleServices.map((service) => (
                     <Link
