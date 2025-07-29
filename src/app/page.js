@@ -79,7 +79,7 @@ export default function Home() {
       </div>
         {/* Hero 3 */}
         <div className="relative flex justify-around w-full h-full">
-          <div className={`relative w-full overflow-hidden ${showAllService ? "h-[460px] sm:h-[460px] md:h-[1100px]" : "h-[460px] md:h-[460px] lg:h-[900px]"}`}>
+          <div className={`relative w-full overflow-hidden ${showAllService ? "h-[1100px]" : "h-[900px]"}`}>
             <Image
               src="/Gambar Servis Kami.png"
               alt="Servis Kami"
@@ -90,25 +90,12 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/60 z-[1]" />
             <div className="absolute inset-0 z-[2] flex flex-col py-10 px-10 text-white">
                 <h1 className="font-extrabold text-3xl mb-5">Servis Kami</h1>
-                <div className="lg:hidden relative my-4">
-                {/* Left Arrow */}
-                <button
-                  onClick={() => scrollSlider(serviceSliderRef, "left")}
-                  className="absolute -left-8 top-1/2 -translate-y-1/2 z-10 bg-white text-black rounded-full p-2 shadow"
-                >
-                  ◀
-                </button>
-
-                {/* Slider Container */}
-                <div
-                  ref={serviceSliderRef}
-                  className="flex gap-4 overflow-x-auto snap-x scroll-smooth pb-4 px-4"
-                >
+                <div className="grid grid-cols-2 gap-4 lg:hidden px-4">
                   {visibleServices.map((service) => (
                     <Link
                       key={service.slug}
                       href={`/service/${service.slug}`}
-                      className="min-w-[280px] h-[280px] flex-shrink-0 relative overflow-hidden rounded-2xl group snap-start shadow-lg"
+                      className="w-full h-[180px] relative overflow-hidden rounded-2xl group shadow-lg"
                     >
                       <Image
                         src={service.mini_image}
@@ -118,21 +105,12 @@ export default function Home() {
                         className="group-hover:scale-110 transition-transform duration-500"
                         priority
                       />
-                      <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
-                        <p className="text-white font-bold text-lg">{service.title}</p>
+                      <div className="absolute inset-0 flex items-center justify-center px-2 text-center">
+                        <p className="text-white font-bold text-sm sm:text-base">{service.title}</p>
                       </div>
                     </Link>
                   ))}
                 </div>
-
-                {/* Right Arrow */}
-                <button 
-                  onClick={() => scrollSlider(serviceSliderRef, "right")}
-                  className="absolute -right-8 top-1/2 -translate-y-1/2 z-10 bg-white text-black rounded-full p-2 shadow"
-                >
-                  ▶
-                </button>
-              </div>
 
                 {/* Desktop Grid */}
                 <div className="hidden lg:grid grid-cols-3 gap-6 w-full place-items-center">
@@ -159,7 +137,7 @@ export default function Home() {
                 {!showAllService && services.length > 6 && (
                   <button
                     onClick={() => setShowAllService(true)}
-                    className="mt-10 px-6 py-3 bg-white text-[#0a1c29] font-bold rounded-full self-center hover:bg-gray-100 transition hidden lg:block"
+                    className="mt-10 px-6 py-3 bg-white text-[#0a1c29] font-bold rounded-full self-center hover:bg-gray-100 transition lg:block"
                   >
                     Lebih Banyak Servis
                   </button>
