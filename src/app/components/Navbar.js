@@ -61,7 +61,7 @@ export default function Navbar() {
                 className={`
                     ${isAtTop && !isMenuOpen ? "relative bg-transparent" : "fixed bg-[#0a1c29]"} 
                     ${!isAtTop && !isMenuOpen ? "before:content-[''] before:relative before:inset-0)] before:brightness-50 before:opacity-80 before:z-[-1]" : ""}
-                    top-0 left-0 w-full py-4 px-6 text-white shadow-md transition-transform duration-500 z-50 
+                    top-0 left-0 w-full py-2 px-6 text-white shadow-md transition-transform duration-500 z-50 
                     ${isVisible ? "translate-y-0" : "-translate-y-full"}
                 `}
             >
@@ -70,8 +70,8 @@ export default function Navbar() {
                         <Image
                             src="/Logo.png"
                             alt="Logo"
-                            width={90}
-                            height={90}
+                            width={180}
+                            height={110}
                             priority
                         />
                     </Link>

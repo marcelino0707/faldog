@@ -97,7 +97,7 @@ export default function Service() {
                     <Link
                         key={index}
                         href={`/service/${matchedService.slug}`}
-                        className="inline-block bg-gray-200 text-sm text-gray-800 px-4 py-1 rounded-full hover:bg-gray-300 transition"
+                        className="inline-block bg-white border-1 hover:bg-[#E8C547] text-sm text-gray-800 px-4 py-1 rounded-full transition"
                     >
                         {item}
                     </Link>
@@ -141,7 +141,7 @@ export default function Service() {
                     <Link
                         key={index}
                         href={`/service/${matchedService.slug}`}
-                        className="inline-block bg-gray-200 text-sm text-gray-800 px-4 py-1 rounded-full hover:bg-gray-300 transition"
+                        className="inline-block bg-white border-1 hover:bg-[#E8C547] text-sm text-gray-800 px-4 py-1 rounded-full transition"
                     >
                         {item}
                     </Link>

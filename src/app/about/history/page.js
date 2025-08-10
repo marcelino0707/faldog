@@ -25,7 +25,7 @@ export default function History() {
 
         {/* Description */}
         <p className="text-black max-w-3xl leading-relaxed">
-          PT. Lingga Jaya Perkasa Line didirikan pada tanggal 30 bulan Juni tahun 2009 di Cilegon - Banten. Telah disahkan oleh instansi yang berwenang dan dihadiri oleh pemegang saham yang telah berkomitmen untuk membangun suatu perusahaan dengan maksud dan tujuan serta kegiatan usaha dibidang Pertambangan, Kontraktor, Supplier, Jasa, Heavy Duty Rental, General Trading, Perusahaan Bongkar Muat (PBM) dan jasa umum lainnya. Untuk mencapai maksud dan tujuan tersebut diatas perusahaan kami dapat melaksanakan kegiatan usaha dalam segala bidang pada umumnya
+          PT. Lingga Perdana didirikan pada 13 Mei 2002 dan awalnya bergerak di bidang pengelolaan limbah B3. Seiring perkembangan usaha dan didukung fasilitas yang memadai, perusahaan melebarkan sayap ke bidang jasa, supplier, shipping agent, serta niaga umum dan pengangkutan BBM darat/lautan, dengan perizinan resmi dari Dirjen Migas. Saat ini, PT. Lingga Perdana melayani pasokan BBM seperti Solar HSD dan Minyak Bakar MFO untuk industri, mobile bunker, serta kebutuhan masyarakat, dengan mutu produk yang sesuai standar. Berkantor pusat di Merak, Cilegon, Banten, perusahaan telah beroperasi di berbagai wilayah Indonesia dan menjangkau hingga tingkat internasional.
         </p>
       </div>
     </div>

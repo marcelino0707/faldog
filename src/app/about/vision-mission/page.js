@@ -28,8 +28,7 @@ export default function VisionMission() {
         <div className="mb-4">
           <h3 className="font-bold">Visi Kami</h3>
           <p>
-            Visi ingin menciptakan perusahaan yang bonavit dan mampu memberikan
-            pelayanan yang terbaik terhadap pelanggan (customer)
+            Menjadi perusahaan Niaga  BBM terkemuka di tingkat Nasional dan mampu bersaing dalam pasar bebas di tingkat Internasional, karena keberhasilannya menyediakan dan mendistribusikan kebutuhan BBM kepada pelanggan dengan tepat waktu, tepat mutu dan tepat jumlah serta didukung sumber daya yang handal dna professional
           </p>
         </div>
 
@@ -37,10 +36,7 @@ export default function VisionMission() {
         <div>
           <h3 className="font-bold">Misi Kami</h3>
           <p>
-            Misi perusahaan berperan aktif untuk mengembangkan dan memberikan
-            kepuasaan terhadap pelanggan (Customer) dan mampu menciptakan
-            lapangan kerja guna membantu khususnya pada masyarakat dan umumnya
-            dapat memberikan pemasukan pada negara
+            Perusahaan mampu berperan dan berkontribusi dalam mengisi pembangunan masyarakat, bangsa, dan Negara Republik Indonesia, dengan turut serta memperkokoh kegiatan industri, transportasi dan pembangunan infrastruktur serta meningkatkan devisa melalui supply BBM
           </p>
         </div>
       </div>

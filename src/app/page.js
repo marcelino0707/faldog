@@ -93,94 +93,99 @@ export default function Home() {
           </div>
         </div>
       </div>
-        {/* Hero 3 */}
-        <div className="relative flex justify-around w-full h-full">
-          <div className={`relative w-full overflow-hidden ${showAllService ? "h-[1400px] md:h-[1100px]" : "h-[1200px] md:h-[900px]"}`}>
-            <Image
-              src="/Gambar Servis Kami.png"
-              alt="Servis Kami"
-              fill
-              style={{ objectFit: "cover", objectPosition: "top"}}
-              priority
-            />
-          <div className="absolute inset-0 bg-black/60 z-[1]" />
-            <div className="absolute inset-0 z-[2] flex flex-col py-10 text-white">
-                <h1 className="font-extrabold text-3xl mb-5 pl-20 sm:pl-4">Servis Kami</h1>
-                <div className="grid grid-cols-2 gap-4 lg:hidden px-4">
-                  {visibleServices.map((service) => (
-                    <Link
-                      key={service.slug}
-                      href={`/service/${service.slug}`}
-                      className="w-full h-[300px] relative overflow-hidden rounded-2xl group shadow-lg"
-                    >
-                      <Image
-                        src={service.mini_image}
-                        alt={service.title}
-                        fill
-                        style={{ objectFit: "cover", objectPosition: "center" }}
-                        className="group-hover:scale-110 transition-transform duration-500"
-                        priority
-                      />
-                      <div className="absolute inset-0 flex items-start justify-start px-2 py-6 pl-4">
-                        <p className="text-white font-bold text-xl">{service.title}</p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-
-                {/* Desktop Grid */}
-                <div className="hidden lg:grid grid-cols-3 gap-6 w-full place-items-center">
-                  {visibleServices.map((service) => (
-                    <Link
-                      key={service.slug}
-                      href={`/service/${service.slug}`}
-                      className="w-[300px] h-[300px] relative overflow-hidden rounded-2xl group shadow-lg"
-                    >
-                      <Image
-                        src={service.mini_image}
-                        alt={service.title}
-                        fill
-                        style={{ objectFit: "cover", objectPosition: "center" }}
-                        className="group-hover:scale-110 transition-transform duration-500"
-                        priority
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
-                        <p className="text-white font-bold text-lg">{service.title}</p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-                {!showAllService && services.length > 6 && (
-                  <button
-                    onClick={() => setShowAllService(true)}
-                    className="mt-10 px-6 py-3 bg-white text-[#0a1c29] font-bold rounded-full self-center hover:bg-gray-100 transition lg:block"
+      {/* Hero 3 */}
+      <div className="relative flex justify-around w-full h-full">
+        <div className={`relative w-full overflow-hidden ${showAllService ? "h-[1400px] md:h-[1100px]" : "h-[1200px] md:h-[900px]"}`}>
+          <Image
+            src="/Gambar Servis Kami.png"
+            alt="Servis Kami"
+            fill
+            style={{ objectFit: "cover", objectPosition: "top"}}
+            priority
+          />
+        <div className="absolute inset-0 bg-black/60 z-[1]" />
+          <div className="absolute inset-0 z-[2] flex flex-col py-10 text-white">
+              <h1 className="font-extrabold text-3xl mb-5 pl-20 sm:pl-4">Servis Kami</h1>
+              <div className="grid grid-cols-2 gap-4 lg:hidden px-4">
+                {visibleServices.map((service) => (
+                  <Link
+                    key={service.slug}
+                    href={`/service/${service.slug}`}
+                    className="w-full h-[300px] relative overflow-hidden rounded-2xl group shadow-lg"
                   >
-                    Lebih Banyak Servis
-                  </button>
-                )}
-            </div>
+                    <Image
+                      src={service.mini_image}
+                      alt={service.title}
+                      fill
+                      style={{ objectFit: "cover", objectPosition: "center" }}
+                      className="group-hover:scale-110 transition-transform duration-500"
+                      priority
+                    />
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
+                    <div className="absolute inset-0 flex items-start justify-start px-2 py-6 pl-4">
+                      <p className="text-white font-bold text-xl">{service.title}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+
+              {/* Desktop Grid */}
+              <div className="hidden lg:grid grid-cols-3 gap-6 w-full place-items-center">
+                {visibleServices.map((service) => (
+                  <Link
+                    key={service.slug}
+                    href={`/service/${service.slug}`}
+                    className="w-[300px] h-[300px] relative overflow-hidden rounded-2xl group shadow-lg"
+                  >
+                    <Image
+                      src={service.mini_image}
+                      alt={service.title}
+                      fill
+                      style={{ objectFit: "cover", objectPosition: "center" }}
+                      className="group-hover:scale-110 transition-transform duration-500"
+                      priority
+                    />
+                     {/* Overlay */}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
+                    <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
+                      <p className="text-white font-bold text-lg">{service.title}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+              {!showAllService && services.length > 6 && (
+                <button
+                  onClick={() => setShowAllService(true)}
+                  className="mt-10 px-6 py-3 bg-white text-[#0a1c29] font-bold rounded-full self-center hover:bg-gray-100 transition lg:block"
+                >
+                  Lebih Banyak Servis
+                </button>
+              )}
           </div>
         </div>
-        {/* Hero 4 */}
-        <div className="relative w-full h-full text-white">
-          <div className="relative w-full h-full bg-white py-10 px-4 lg:px-20">
-            <h1 className="text-[#07A6E1] font-bold text-3xl mb-8">Berita Terkini</h1>
+      </div>
+      {/* Hero 4 */}
+      <div className="relative w-full h-full text-white">
+        <div className="relative w-full h-full bg-white py-10 px-4 lg:px-20">
+          <h1 className="text-[#07A6E1] font-bold text-3xl mb-8">Berita Terkini</h1>
 
-            {/* Desktop (auto scroll horizontal with snap-x) */}
-            <div className="hidden sm:block relative">
-              {/* Snap Slider */}
-              <div
-                ref={newsSliderRef}
-                className="flex gap-4 overflow-x-auto snap-x scroll-smooth pb-4"
-                onMouseEnter={() => clearInterval(autoScrollRef.current)}
-                onMouseLeave={startAutoScroll}
-              >
-                {visibleNews.map((item) => (
-                  <Link
-                    key={item.slug}
-                    href={`/news/${item.slug}`}
-                    className="min-w-[300px] h-[300px] flex-shrink-0 relative overflow-hidden rounded-2xl group snap-start shadow-lg"
-                  >
+          {/* Desktop (auto scroll horizontal with snap-x) */}
+          <div className="hidden sm:block relative">
+            {/* Snap Slider */}
+            <div
+              ref={newsSliderRef}
+              className="flex gap-4 overflow-x-auto snap-x scroll-smooth pb-4"
+              onMouseEnter={() => clearInterval(autoScrollRef.current)}
+              onMouseLeave={startAutoScroll}
+            >
+              {visibleNews.map((item) => (
+                <Link
+                  key={item.slug}
+                  href={`/news/${item.slug}`}
+                  className="min-w-[300px] flex-shrink-0 snap-start group"
+                >
+                  <div className="relative h-[300px] overflow-hidden rounded-2xl shadow-lg">
                     <Image
                       src={item.mini_image}
                       alt={item.title}
@@ -189,22 +194,22 @@ export default function Home() {
                       className="group-hover:scale-110 transition-transform duration-500"
                       priority
                     />
-                    <div className="absolute bottom-0 left-0 w-full bg-black/60 py-2 px-4">
-                      <p className="text-white font-semibold text-center">{item.title}</p>
-                    </div>
-                  </Link>
-                ))}
-              </div>
+                  </div>
+                  <p className="mt-2 text-black font-semibold text-center group-hover:text-[#07A6E1]">{item.title}</p>
+                </Link>
+              ))}
             </div>
+          </div>
 
-            {/* Mobile (grid 2x2) */}
-            <div className="grid grid-cols-2 gap-2 sm:hidden">
-              {visibleNews.map((item) => (
-                <Link
-                  key={item.slug}
-                  href={`/news/${item.slug}`}
-                  className="w-full h-[300px] relative overflow-hidden rounded-2xl shadow-lg group"
-                >
+          {/* Mobile (grid 2x2) */}
+          <div className="grid grid-cols-2 gap-2 sm:hidden">
+            {visibleNews.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/news/${item.slug}`}
+                className="w-full group"
+              >
+                <div className="relative h-[300px] overflow-hidden rounded-2xl shadow-lg">
                   <Image
                     src={item.mini_image}
                     alt={item.title}
@@ -213,22 +218,21 @@ export default function Home() {
                     className="group-hover:scale-110 transition-transform duration-500"
                     priority
                   />
-                  <div className="absolute bottom-0 left-0 w-full bg-black/60 py-1 px-2">
-                    <p className="text-white text-sm font-semibold text-center">{item.title}</p>
-                  </div>
-                </Link>
-              ))}
-            </div>
+                </div>
+                <p className="mt-2 mb-4 text-black text-sm font-semibold text-center group-hover:text-[#07A6E1]">{item.title}</p>
+              </Link>
+            ))}
+          </div>
 
-            {/* Tombol Lebih Banyak Berita */}
-            {!showAllNews && news.length > 6 && (
-              <button
-                onClick={() => setShowAllNews(true)}
-                className="sm:hidden mt-10 px-6 py-3 bg-[#E8C547] text-white font-bold rounded-full self-center hover:bg-[#F4B400] transition block mx-auto"
-              >
-                Lebih Banyak Berita
-              </button>
-            )}
+          {/* Tombol Lebih Banyak Berita */}
+          {!showAllNews && news.length > 6 && (
+            <button
+              onClick={() => setShowAllNews(true)}
+              className="sm:hidden mt-10 px-6 py-3 bg-[#E8C547] text-white font-bold rounded-full self-center hover:bg-[#F4B400] transition block mx-auto"
+            >
+              Lebih Banyak Berita
+            </button>
+          )}
           </div>
         </div>
 
