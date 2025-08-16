@@ -34,13 +34,10 @@ export default function Service() {
             <div className="order-2 md:order-1 flex items-center justify-center bg-white px-6 md:px-10 py-10 md:py-12">
             <div className="max-w-md">
                 <h3 className="text-xl md:text-2xl font-bold text-black mb-4">
-                Mitra Anda Dalam Konstruksi
+                    Siap Menjadi Mitra Energi Bisnis Anda
                 </h3>
                 <p className="text-gray-700 text-base leading-relaxed">
-                Perusahaan kami bersedia dan merasa mampu dalam bentuk penanganan
-                pekerjaan di bidang Pertambangan, Kontraktor, Supplier, Jasa,
-                Heavy Duty Rental, General Trading, Perusahaan Bongkar Muat (PBM)
-                dan Jasa umum lainnya.
+                    Kami terbuka untuk menjalin kemitraan baru dengan perusahaan atau institusi yang membutuhkan solusi distribusi BBM yang aman, efisien, dan terintegrasi. Jika Anda mencari penyalur BBM yang dapat dipercaya untuk mendukung kelancaran operasional bisnis Anda, PT Lingga Perdana siap menjadi mitra terbaik Anda.
                 </p>
             </div>
             </div>
@@ -69,26 +66,21 @@ export default function Service() {
             <div className="order-2 flex items-center justify-center bg-white px-6 md:px-10 py-10 md:py-12">
             <div className="max-w-md">
                 <h3 className="text-xl md:text-2xl font-bold text-black mb-4">
-                Jasa Pendukung
+                    Jasa Pendukung
                 </h3>
                 <p className="text-gray-700 text-base leading-relaxed mb-6">
-                PT Lingga Jaya Perkasa Line memiliki lini bisnis jasa yang
-                melingkupi portfolio utama korporasi, dimulai dari jasa-jasa
-                pekerjaan tanah, pekerjaan pondasi serta penyiapan lahan
-                konstruksi dengan didukung pengalaman dan utilitas yang telah
-                teruji yang menjadikan kami adaptif dalam menangani kondisi di
-                lapangan dan kebutuhan masyarakat dalam negeri.
+                    PT Lingga Perdana memiliki lini bisnis jasa yang mendukung dan memperkuat portofolio utama perusahaan, meliputi distribusi bahan bakar minyak (BBM), pengangkutan darat dan laut, serta layanan mobile bunker. Dengan pengalaman yang solid dan komitmen terhadap kualitas layanan, PT Lingga Perdana hadir memberikan solusi energi yang andal dan efisien.
                 </p>
 
                 {/* Badges */}
                 <div className="flex flex-wrap gap-2">
                 {[
-                    "Pekerjaan Tanah",
-                    "Pekerjaan Pondasi",
-                    "Pekerjaan Beton",
-                    "Pekerjaan Pengaspalan",
-                    "Penyiapan Lahan Konstruksi",
-                    "Penyiapan dan Pematangan Tanah",
+                    "Solar HSD",
+                    "Marine Fuel Oil",
+                    "Layanan Bunker",
+                    "Transportasi BBM (Darat & Laut)",
+                    "Penyaluran BBM",
+                    "Pekerjaan Penyiapan dan Pematangan Tanah",
                 ].map((item, index) => {
                     const matchedService = services.find(
                     (service) => service.title === item
@@ -123,12 +115,7 @@ export default function Service() {
                 Penyedia Solusi <br /> Bahan Bangunan
                 </h3>
                 <p className="text-gray-700 text-base leading-relaxed mb-6">
-                PT Lingga Jaya Perkasa Line menyediakan berbagai macam varian
-                produk dan layanan sesuai tingkat kebutuhan pembangunan dengan
-                kompleksitas yang dinamis dari aspek geografis dan kondisi lokasi
-                di Indonesia. Penyediaan tersebut hadir untuk memenuhi berbagai
-                sektor industri, konstruksi, infrastruktur hingga proyek skala
-                besar lainnya.
+                    PT Lingga Perdana menyediakan berbagai macam varian produk dan layanan sesuai tingkatan kebutuhan pembangunan dengan kompleksitas yang dihadapi dari aspek geografis dan kondisi yang membutuhkan persyaratan khusus lainnya mulai dari renovasi sederhana, proyek pembangunan properti, fasilitas umum, infrastruktur hingga proyek skala besar lainnya.
                 </p>
 
                 {/* Badges */}

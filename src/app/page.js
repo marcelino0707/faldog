@@ -51,7 +51,7 @@ export default function Home() {
             priority
           />
 
-          <div className="absolute inset-0 flex items-center justify-start px-20">
+          <div className="absolute inset-0 flex items-center justify-start px-4 lg:px-20">
             <h2 className="text-white text-2xl max-w-md font-[600]">
               Kami hadir untuk memberikan kepuasaan kepada pelanggan dan{" "}
               <strong className="text-3xl"> Masyarakat</strong>
@@ -76,11 +76,10 @@ export default function Home() {
             {/* Konten */}
             <div className="w-full lg:w-1/2 flex flex-col justify-center px-2 sm:px-6 lg:px-8 gap-4">
               <h2 className="text-[#07A6E1] text-xl sm:text-2xl font-bold text-center lg:text-left">
-                Sejarah PT Lingga Jaya Perkasa Line
+                Sejarah PT.Lingga Perdana
               </h2>
               <p className="text-base sm:text-lg leading-relaxed text-justify">
-                PT Lingga Jaya Perkasa Line memiliki sejarah yang membanggakan di Indonesia.
-                Didirikan pada tanggal 30 Juni tahun 2009. Pelajari lebih lanjut tentang sejarah perusahaan selama beberapa windu.
+                PT.Lingga Perdana memiliki sejarah yang membanggakan di Indonesia. Didirikan pada tanggal 13 Mei tahun 2002. Pelajari lebih lanjut tentang sejarah perusahaan selama beberapa windu.
               </p>
               <div className="mt-2 lg:mt-0 flex justify-center lg:justify-start">
                 <Link href="/about/history">
@@ -104,7 +103,7 @@ export default function Home() {
             priority
           />
         <div className="absolute inset-0 bg-black/60 z-[1]" />
-          <div className="absolute inset-0 z-[2] flex flex-col py-10 text-white">
+          <div className="absolute inset-0 z-[2] flex flex-col py-10 text-white px-4 lg:px-20">
               <h1 className="font-extrabold text-3xl mb-5 pl-20 sm:pl-4">Servis Kami</h1>
               <div className="grid grid-cols-2 gap-4 lg:hidden px-4">
                 {visibleServices.map((service) => (
@@ -165,49 +164,18 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       {/* Hero 4 */}
       <div className="relative w-full h-full text-white">
         <div className="relative w-full h-full bg-white py-10 px-4 lg:px-20">
           <h1 className="text-[#07A6E1] font-bold text-3xl mb-8">Berita Terkini</h1>
 
-          {/* Desktop (auto scroll horizontal with snap-x) */}
-          <div className="hidden sm:block relative">
-            {/* Snap Slider */}
-            <div
-              ref={newsSliderRef}
-              className="flex gap-4 overflow-x-auto snap-x scroll-smooth pb-4"
-              onMouseEnter={() => clearInterval(autoScrollRef.current)}
-              onMouseLeave={startAutoScroll}
-            >
-              {visibleNews.map((item) => (
-                <Link
-                  key={item.slug}
-                  href={`/news/${item.slug}`}
-                  className="min-w-[300px] flex-shrink-0 snap-start group"
-                >
-                  <div className="relative h-[300px] overflow-hidden rounded-2xl shadow-lg">
-                    <Image
-                      src={item.mini_image}
-                      alt={item.title}
-                      fill
-                      style={{ objectFit: "cover", objectPosition: "center" }}
-                      className="group-hover:scale-110 transition-transform duration-500"
-                      priority
-                    />
-                  </div>
-                  <p className="mt-2 text-black font-semibold text-center group-hover:text-[#07A6E1]">{item.title}</p>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Mobile (grid 2x2) */}
-          <div className="grid grid-cols-2 gap-2 sm:hidden">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 place-items-center">
             {visibleNews.map((item) => (
               <Link
                 key={item.slug}
                 href={`/news/${item.slug}`}
-                className="w-full group"
+                className="w-full md:w-[300px] group"
               >
                 <div className="relative h-[300px] overflow-hidden rounded-2xl shadow-lg">
                   <Image
@@ -219,7 +187,9 @@ export default function Home() {
                     priority
                   />
                 </div>
-                <p className="mt-2 mb-4 text-black text-sm font-semibold text-center group-hover:text-[#07A6E1]">{item.title}</p>
+                <p className="mt-2 text-black font-semibold text-center group-hover:text-[#07A6E1]">
+                  {item.title}
+                </p>
               </Link>
             ))}
           </div>
@@ -228,13 +198,13 @@ export default function Home() {
           {!showAllNews && news.length > 6 && (
             <button
               onClick={() => setShowAllNews(true)}
-              className="sm:hidden mt-10 px-6 py-3 bg-[#E8C547] text-white font-bold rounded-full self-center hover:bg-[#F4B400] transition block mx-auto"
+              className="mt-10 px-6 py-3 bg-[#E8C547] text-white font-bold rounded-full self-center hover:bg-[#F4B400] transition block mx-auto"
             >
               Lebih Banyak Berita
             </button>
           )}
-          </div>
         </div>
+      </div>
 
       </section>
     </>

@@ -63,12 +63,13 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {/* Kiri: Informasi kantor */}
                     <div className="px-20">
-                        <h1 className="font-bold text-2xl mb-4">PT Lingga Jaya Perkasa Line</h1>
+                        <h1 className="font-bold text-2xl mb-4">PT Lingga Perdana</h1>
                         <p className="mb-4 text-base">
-                            Jl. Raya Suralaya No. 09 Link. Pulorida Kel. Lebakgede, Kec. Pulomerak, Kota Cilegon, Banten, Indonesia
+                            Jl. Raya Suralaya, Link. Pulorida No. 09 <br />
+                            Kel. Lebakgede, Kec. Pulomerak, <br />
+                            Kota Cilegon, Banten, Indonesia
                         </p>
-                        <p className="text-base mb-1">Phone: 0254-574246</p>
-                        <p className="text-base mb-4">Fax: 0254-574542</p>
+                        <p className="text-base mb-4">Phone: (0254) 574246/574451 <br/> Fax: (0254) 574976/574452 <br/> E-mail: linggacil@yahoo.com </p>
                     </div>
 
                     {/* Kanan: Form */}

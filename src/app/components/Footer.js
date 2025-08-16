@@ -11,18 +11,21 @@ export default function Footer() {
                 style={{ objectFit: "cover", objectPosition: "center" }}
                 priority
             />
-            <div className="absolute inset-0 flex flex-col md:flex-row justify-between items-center md:items-start px-6 md:px-16 py-6 gap-6 bg-black/50">
+            <div className="absolute inset-0 flex flex-col md:flex-row justify-between items-center md:items-start px-4 lg:px-20 py-6 gap-6 bg-black/50">
                 <div className="text-white text-sm md:text-base font-light max-w-md w-full h-full flex flex-col justify-between">
                     <div className="mb-4">
                         <strong className="block font-bold mb-1">Alamat Kantor</strong>
                         <p>
-                            Pulorida RT.003 RW.001 
+                            Jl. Raya Suralaya, Link.Pulorida No. 09
                         </p>
                         <p>
-                            Kel. Lebakgede Kec. Pulomerak, Kota Cilegon, Banten
+                            Kel. Lebakgede Kec. Pulomerak, Kota Cilegon, Banten,
                         </p>
                         <p>
-                            Telp: 0254-574452
+                            42439
+                        </p>
+                        <p>
+                            Telp: (0254) 574246/574451
                         </p>
                     </div>
                     <div className="mb-4">
@@ -30,7 +33,7 @@ export default function Footer() {
                             Email:
                         </p>
                         <p>
-                            Corporate Secretary: corpseclingga@gmail.com
+                            linggacil@yahoo.com
                         </p>
                     </div>   
                     <div className="flex gap-10">
