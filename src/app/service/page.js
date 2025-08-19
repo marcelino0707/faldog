@@ -18,7 +18,7 @@ export default function Service() {
             <div className="absolute inset-0 flex items-center justify-end px-6 md:px-20 z-20">
             <div className="text-right max-w-md">
                 <h2 className="text-white text-2xl md:text-4xl font-bold leading-snug drop-shadow-md">
-                Spesialis Jasa <br /> Konstruksi
+                Spesialis Jasa <br /> Energi
                 </h2>
             </div>
             </div>

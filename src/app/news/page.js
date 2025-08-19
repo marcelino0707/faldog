@@ -8,26 +8,6 @@ import { news } from "../data/news";
 export default function News() {
     const [showAllNews, setShowAllNews] = useState(false);
     const visibleNews = showAllNews ? news : news.slice(0, 6);
-
-    const newsSliderRef = useRef(null);
-    const autoScrollRef = useRef(null);
-
-    const startAutoScroll = () => {
-        autoScrollRef.current = setInterval(() => {
-        if (newsSliderRef.current) {
-            newsSliderRef.current.scrollBy({
-            left: 320,
-            behavior: "smooth",
-            });
-
-            // Loop back to start if reached end
-            const { scrollLeft, scrollWidth, clientWidth } = newsSliderRef.current;
-            if (scrollLeft + clientWidth >= scrollWidth) {
-            newsSliderRef.current.scrollTo({ left: 0, behavior: "smooth" });
-            }
-        }
-        }, 2000);
-    };
     
     return (
         <>
@@ -50,75 +30,45 @@ export default function News() {
                     </div>
                 </div>
             </section>
-            <section className="relative w-full h-full text-white">
+            <div className="relative w-full h-full text-white">
                 <div className="relative w-full h-full bg-white py-10 px-4 lg:px-20">
                 <h1 className="text-[#07A6E1] font-bold text-3xl mb-8">Berita Terkini</h1>
 
-                {/* Desktop (auto scroll horizontal with snap-x) */}
-                <div className="hidden sm:block relative">
-                {/* Snap Slider */}
-                <div
-                    ref={newsSliderRef}
-                    className="flex gap-4 overflow-x-auto snap-x scroll-smooth pb-4"
-                    onMouseEnter={() => clearInterval(autoScrollRef.current)}
-                    onMouseLeave={startAutoScroll}
-                >
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-6 place-items-center">
                     {visibleNews.map((item) => (
                     <Link
                         key={item.slug}
                         href={`/news/${item.slug}`}
-                        className="min-w-[300px] h-[300px] flex-shrink-0 relative overflow-hidden rounded-2xl group snap-start shadow-lg"
+                        className="w-full md:w-[300px] group"
                     >
+                        <div className="relative h-[300px] overflow-hidden rounded-2xl shadow-lg">
                         <Image
-                        src={item.mini_image}
-                        alt={item.title}
-                        fill
-                        style={{ objectFit: "cover", objectPosition: "center" }}
-                        className="group-hover:scale-110 transition-transform duration-500"
-                        priority
+                            src={item.mini_image}
+                            alt={item.title}
+                            fill
+                            style={{ objectFit: "cover", objectPosition: "center" }}
+                            className="group-hover:scale-110 transition-transform duration-500"
+                            priority
                         />
-                        <div className="absolute bottom-0 left-0 w-full bg-black/60 py-2 px-4">
-                        <p className="text-white font-semibold text-center">{item.title}</p>
                         </div>
+                        <p className="mt-2 text-black font-semibold text-center group-hover:text-[#07A6E1]">
+                        {item.title}
+                        </p>
                     </Link>
                     ))}
-                </div>
-                </div>
-
-                {/* Mobile (grid 2x2) */}
-                <div className="grid grid-cols-2 gap-2 sm:hidden">
-                {visibleNews.map((item) => (
-                    <Link
-                    key={item.slug}
-                    href={`/news/${item.slug}`}
-                    className="w-full h-[300px] relative overflow-hidden rounded-2xl shadow-lg group"
-                    >
-                    <Image
-                        src={item.mini_image}
-                        alt={item.title}
-                        fill
-                        style={{ objectFit: "cover", objectPosition: "center" }}
-                        className="group-hover:scale-110 transition-transform duration-500"
-                        priority
-                    />
-                    <div className="absolute bottom-0 left-0 w-full bg-black/60 py-1 px-2">
-                        <p className="text-white text-sm font-semibold text-center">{item.title}</p>
-                    </div>
-                    </Link>
-                ))}
                 </div>
 
                 {/* Tombol Lebih Banyak Berita */}
                 {!showAllNews && news.length > 6 && (
-                <button
+                    <button
                     onClick={() => setShowAllNews(true)}
-                    className="sm:hidden mt-10 px-6 py-3 bg-[#E8C547] text-white font-bold rounded-full self-center hover:bg-[#F4B400] transition block mx-auto"
-                >
+                    className="mt-10 px-6 py-3 bg-[#E8C547] text-white font-bold rounded-full self-center hover:bg-[#F4B400] transition block mx-auto"
+                    >
                     Lebih Banyak Berita
-                </button>
+                    </button>
                 )}
             </div>
-            </section>
+        </div>
         </>
     );
 }

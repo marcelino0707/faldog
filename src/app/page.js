@@ -12,32 +12,6 @@ export default function Home() {
   const visibleServices = showAllService ? services : services.slice(0, 6);
   const visibleNews = showAllNews ? news : news.slice(0, 6);
 
-  const newsSliderRef = useRef(null);
-
-  const autoScrollRef = useRef(null);
-
-  const startAutoScroll = () => {
-    autoScrollRef.current = setInterval(() => {
-      if (newsSliderRef.current) {
-        newsSliderRef.current.scrollBy({
-          left: 320,
-          behavior: "smooth",
-        });
-
-        // Loop back to start if reached end
-        const { scrollLeft, scrollWidth, clientWidth } = newsSliderRef.current;
-        if (scrollLeft + clientWidth >= scrollWidth) {
-          newsSliderRef.current.scrollTo({ left: 0, behavior: "smooth" });
-        }
-      }
-    }, 2000);
-  };
-
-  useEffect(() => {
-    startAutoScroll();
-    return () => clearInterval(autoScrollRef.current);
-  }, []);
-
   return (
     <>
       <section className="w-full relative">
