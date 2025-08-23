@@ -4,45 +4,119 @@ export const services = [
         mini_image: "/services/image 1.png",
         image: "/service-detail/1.png",
         title: "Solar HSD", 
-        subtitle: "Jasa Pekerjaan Tanah: Fondasi Sukses untuk Setiap Proyek Konstruksi",
-        first_content: "Pekerjaan tanah merupakan langkah awal yang sangat penting dalam setiap proyek konstruksi. Ini adalah proses persiapan lahan yang memerlukan perencanaan matang, peralatan yang tepat, serta tenaga ahli yang berpengalaman. Di perusahaan kami, kami memahami bahwa kualitas pekerjaan tanah akan memengaruhi kesuksesan dan keamanan bangunan atau infrastruktur yang dibangun di atasnya. Oleh karena itu, kami menawarkan layanan pekerjaan tanah profesional yang dirancang untuk memastikan bahwa setiap proyek dimulai dengan dasar yang kuat dan stabil.",
-        second_content: "Pekerjaan tanah meliputi serangkaian proses yang bertujuan untuk mempersiapkan lahan atau tanah agar siap digunakan untuk pembangunan. Proses ini mencakup penggalian, pemadatan, pengurugan, serta stabilisasi tanah untuk memastikan tanah mampu menopang bangunan atau struktur di atasnya dengan aman dan tahan lama. Layanan ini sangat penting untuk berbagai proyek, mulai dari konstruksi rumah, gedung bertingkat, jalan, jembatan, hingga proyek infrastruktur besar lainnya."
+        subtitle: "Solar HSD (High Speed Diesel)",
+        first_content: "Solar HSD (High Speed Diesel) adalah bahan bakar diesel ringan yang digunakan untuk mesin diesel berkecepatan tinggi. Produk ini sangat cocok untuk kebutuhan industri, alat berat,  kendaraan operasional, genset, dan sektor transportasi darat maupun laut.",
+        first_list_content: {
+            title: "Spesifikasi Teknis",
+            list: [
+                "Tipe: High Speed Diesel (HSD)",
+                "Warna: Kuning Kecokelatan",
+                "Cetane Number: ≥ 51",
+                "Kandungan Sulfur: ≤ 0.25%",
+                "Flash Point: Min. 52°C",
+                "Density @ 15°C: 820–870 kg/m³",
+                "Standar Mutu: Sesuai spesifikasi Pertamina & SNI"
+            ]
+        },
+        second_list_content: {
+            title: "Kelebihan Produk Kami",
+            list: [
+                "Asli & Legal: Disuplai langsung dari sumber resmi pertamina",
+                "Mutu Terjamin: Pengiriman dengan dokumen lengkap dan kontrol kualitas ",
+                "Stabil & Efisien: Cocok untuk mesin diesel industri dan komersial",
+                "Tersedia dalam jumlah besar: Siap melayani kebutuhan reguler dan proyek",
+            ]
+        }
     },
     { 
         slug: "2",
         mini_image: "/services/image 2.png",
         image: "/service-detail/2.png",
-        title: "Marine Fuel Oil", 
-        subtitle: "Jasa Pekerjaan Pondasi: Solusi Konstruksi Tangguh untuk Fondasi yang Kuat dan Tahan Lama",
-        first_content: "Pekerjaan pondasi merupakan aspek fundamental dalam setiap proyek konstruksi, baik untuk bangunan, jembatan, jalan, maupun infrastruktur berat lainnya. Sebagai elemen dasar dari struktur bangunan, pondasi harus mampu menopang seluruh beban di atasnya dengan stabil dan aman. Di sinilah peran penting jasa pekerjaan pondasi yang kami tawarkan. Dengan pengalaman dan keahlian yang mendalam, perusahaan kami menyediakan solusi pondasi yang andal, inovatif, dan sesuai dengan kebutuhan spesifik setiap proyek.",
-        second_content: "Pekerjaan pondasi mencakup segala proses untuk membangun dasar yang kuat bagi struktur di atasnya. Tujuannya adalah untuk mendistribusikan beban bangunan secara merata ke tanah di bawahnya, mencegah penurunan tanah, retakan, atau kerusakan struktural. Proses ini tidak hanya membutuhkan perencanaan teknis yang matang, tetapi juga penguasaan dalam hal kondisi tanah, beban bangunan, dan faktor lingkungan."
+        title: "MFO", 
+        subtitle: "MFO (Marine Fuel Oil)",
+        first_content: "Marine Fuel Oil (MFO) adalah jenis bahan bakar minyak berat yang digunakan terutama untuk mesin-mesin diesel besar, seperti mesin kapal laut, generator industri, dan pembangkit listrik. MFO dikenal juga sebagai residu fuel atau heavy fuel Oil (HFO), yang memerlukan sistem pemanas sebelum digunakan agar viskositasnya optimal.",
+        first_list_content: {
+            title: "Spesifikasi Produk MFO PT. Lingga Pedana:",
+            list: [
+                "Tipe: MFO 180 cSt / MFO 380 cSt (menyesuaikan kebutuhan pengguna)",
+                "Kandungan sulfur: Sesuai regulasi (termasuk opsi low-sulfur fuel oil)",
+                "Viskositas & density: Mengacu pada standar ASTM & Pertamina",
+                "Mutu: Telah melalui proses uji laboratorium dan quality control berlapis",
+            ]
+        },
+        second_list_content: {
+            title: "Keunggulan Pengadaan MFO dari PT. Lingga Perdana:",
+            list: [
+                "Kualitas Terjamin: Produk MFO telah lolos uji mutu dan bersertifikat",
+                "Pengiriman Tepat Waktu: Didukung armada darat dan laut yang siap melayani 24/7",
+                "Legal & Resmi: Penyalur berizin dengan Izin Niaga Umum dan Agen Bunker Pertamina",
+                "Layanan Fleksibel: Melayani pengisian di pelabuhan, offshore base, atau lokasi pelanggan",
+                "Dukungan Teknis: Konsultasi produk dan dukungan teknis operasional tersedia"
+            ]
+        }
     },
     {
         slug: "3",
         mini_image: "/services/image 3.png",
         image: "/service-detail/3.png",
         title: "Layanan Bunker",
-        subtitle: "Jasa Pekerjaan Beton: Kualitas Konstruksi Tangguh dengan Beton Berkualitas Tinggi",
-        first_content: "Pekerjaan pondasi merupakan aspek fundamental dalam setiap proyek konstruksi, baik untuk bangunan, jembatan, jalan, maupun infrastruktur berat lainnya. Sebagai elemen dasar dari struktur bangunan, pondasi harus mampu menopang seluruh beban di atasnya dengan stabil dan aman. Di sinilah peran penting jasa pekerjaan pondasi yang kami tawarkan. Dengan pengalaman dan keahlian yang mendalam, perusahaan kami menyediakan solusi pondasi yang andal, inovatif, dan sesuai dengan kebutuhan spesifik setiap proyek.",
-        second_content: "Pekerjaan beton mencakup seluruh proses yang terkait dengan penggunaan beton dalam konstruksi. Ini meliputi persiapan campuran beton, pengecoran, perawatan (curing), dan finishing beton. Beton yang baik harus memiliki kekuatan, ketahanan, dan fleksibilitas yang cukup untuk menopang bangunan atau infrastruktur dengan beban dan kondisi lingkungan yang bervariasi."
+        subtitle: "Layanan  Bunker (Bunker Service)",
+        first_content: "PT. Lingga Perdana Menyediakan layanan Buneker Service terpecaya dan profesional untuk memenuhi kebutuhan bahan bakar kapal laut (marine fuel) di berbagai wilayah operasional. Sebagai agen resmi dan pemegang Izin Niaga Umum, kami memastikan pasokan BBM laut yang cepat, aman, dan sesuai standar mutu. Jenis BBM yang kami layani meliputi MFO (Marine Fuel Oil), MDG (Marine Diesel Fuel), dan Solar HSD (High Speed Diesel).",
+        first_list_content: {
+            title: "Layanan Bunker Kami Mencakup:",
+            list: [
+                "Pengisian BBM ke kapal niaga, kapal tugboat, dan kapal industri lainnya",
+                "Pelayanan bunker via armada laut sendiri (self-propelled bunker barge)",
+                "Penyaluran BBM langsung ke pelabuhan atau titik sandar",
+                "Dukungan teknis dan dokumentasi lengkap (manifes, delivery order, invoice, dll)",
+            ]
+        },
+        second_list_content: {
+            title: "Keunggulan Layanan Bunker Kami:",
+            list: [
+                "Legalitas Lengkap: Terdaftar sebagai agen bunker resmi Pertamina",
+                "Armada Handal: Didukung kapal tanker bunker dengan kapasitas bervariasi",
+                "Jangkauan Luas: Melayani berbagai pelabuhan industri dan lokasi strategis",
+                "Pelayanan 24/7: Tanggap terhadap kebutuhan darurat atau permintaan mendadak",
+                "Kualitas Terjamin: BBM sesuai spesifikasi industri perkapalan"
+            ]
+        }
     },
     {
         slug: "4",
         mini_image: "/services/image 4.png",
         image: "/service-detail/4.png",
-        title: "Transportasi BBM (Darat & Laut)",
-        subtitle: "Jasa Pekerjaan Pengaspalan: Solusi Jalan yang Kuat, Tahan Lama, dan Berkualitas Tinggi",
-        first_content: "Pengaspalan adalah proses penting dalam membangun dan memperbaiki infrastruktur jalan, lapangan parkir, area industri, dan berbagai fasilitas umum lainnya. Kualitas pengaspalan sangat menentukan daya tahan, keamanan, serta kenyamanan jalan atau area yang dilapisi aspal. Sebagai perusahaan yang berfokus pada konstruksi infrastruktur, kami menyediakan jasa pengaspalan profesional dengan standar tinggi dan teknologi mutakhir untuk memastikan hasil yang kuat, halus, dan tahan lama.",
-        second_content: "Pekerjaan pengaspalan melibatkan penerapan lapisan aspal di atas permukaan jalan atau area tertentu. Aspal adalah campuran agregat (seperti kerikil, pasir, dan batu pecah) dengan bahan pengikat (bitumen) yang dihamparkan dan dipadatkan untuk menciptakan permukaan yang halus, kuat, dan tahan terhadap berbagai kondisi cuaca. Jasa pengaspalan kami mencakup semua tahap pekerjaan mulai dari persiapan lahan, aplikasi aspal, hingga pemeliharaan pasca-pengaspalan."
+        title: "Transportasi BBM",
+        subtitle: "Transportasi BBM (Darat & Laut)",
+        first_content: "Transportasi BBM (Darat & Laut) adalah layanan utama yang kami sediakan untuk mendistribusikan bahan bakar secara efisien dan tepat waktu ke berbagai sektor industri dan komersial. Dengan dukungan armada tangki darat serta kapal pengangkut laut yang memenuhi standar keselamatan dan regulasi resmi, kami melayani pengiriman BBM seperti Solar HSD, MFO, dan MDG ke lokasi proyek, pelabuhan, pabrik, maupun kapal laut. Setiap proses pengangkutan dilakukan dengan pengawasan ketat untuk menjaga kualitas, kuantitas, dan keamanan bahan bakar selama perjalanan.",
+        second_content: "Kami memahami pentingnya pasokan energi yang stabil bagi kelancaran operasional pelanggan. Oleh karena itu, layanan transportasi BBM kami didukung oleh sistem logistik yang handal, tim profesional berpengalaman, serta fleksibilitas pengiriman ke berbagai wilayah, baik terpencil maupun padat industri. Komitmen kami adalah memberikan layanan transportasi BBM yang cepat, aman, dan sesuai kebutuhan, sebagai bagian dari kontribusi kami dalam mendukung pembangunan dan produktivitas nasional."
     },
     {
         slug: "5",
         mini_image: "/services/image 5.png",
         image: "/service-detail/5.png",
         title: "Penyaluran BBM",
-        subtitle: "Jasa Penyiapan Lahan Konstruksi: Fondasi Awal untuk Kesuksesan Proyek Anda",
-        first_content: "Pengaspalan adalah proses penting dalam membangun dan memperbaiki infrastruktur jalan, lapangan parkir, area industri, dan berbagai fasilitas umum lainnya. Kualitas pengaspalan sangat menentukan daya tahan, keamanan, serta kenyamanan jalan atau area yang dilapisi aspal. Sebagai perusahaan yang berfokus pada konstruksi infrastruktur, kami menyediakan jasa pengaspalan profesional dengan standar tinggi dan teknologi mutakhir untuk memastikan hasil yang kuat, halus, dan tahan lama.",
-        second_content: "Pekerjaan pengaspalan melibatkan penerapan lapisan aspal di atas permukaan jalan atau area tertentu. Aspal adalah campuran agregat (seperti kerikil, pasir, dan batu pecah) dengan bahan pengikat (bitumen) yang dihamparkan dan dipadatkan untuk menciptakan permukaan yang halus, kuat, dan tahan terhadap berbagai kondisi cuaca. Jasa pengaspalan kami mencakup semua tahap pekerjaan mulai dari persiapan lahan, aplikasi aspal, hingga pemeliharaan pasca-pengaspalan."
+        subtitle: "Penyaluran BBM",
+        first_content: "PT Lingga Perdana merupakan agen resmi yang ditunjuk dan diakui secara legal untuk menyalurkan Bahan Bakar Minyak (BBM) kepada sektor industri, komersial, dan proyek operasional di berbagai wilayah Indonesia. Kami menyediakan dan mendistribusikan berbagai jenis BBM non-subsidi sesuai kebutuhan dan regulasi yang berlaku, seperti Solar (Biosolar/B35), Dexlite, Pertamina Dex, serta jenis BBM lainnya sesuai permintaan klien.",
+        first_list_content: {
+            title: "Layanan Penyaluran BBM Kami Mencakup:",
+            list: [
+                "Pengadaan & Pengisian BBM langsung dari depo resmi ke lokasi pelanggan",
+                "Distribusi Aman & Tepat Waktu dengan armada tangki BBM bersertifikasi",
+                "Pendampingan Administratif seperti dokumen angkut, manifest, dan laporan volume",
+                "Penyesuaian Volume Sesuai Kebutuhan: dari pasokan harian hingga kontrak jangka panjang",
+            ]
+        },
+        second_list_content: {
+            title: "Sektor Pelanggan yang Dilayani:",
+            list: [
+                "Industri manufaktur & energi",
+                "Proyek konstruksi & infrastruktur",
+                "Perusahaan transportasi & logistik",
+                "Perkebunan & pertambangan",
+                "Perikanan, kelautan & pelayaran"
+            ]
+        }
     },
     {
         slug: "6",
