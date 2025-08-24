@@ -76,9 +76,9 @@ export default function Service() {
                 <div className="flex flex-wrap gap-2">
                 {[
                     "Solar HSD",
-                    "Marine Fuel Oil",
+                    "MFO",
                     "Layanan Bunker",
-                    "Transportasi BBM (Darat & Laut)",
+                    "Transportasi BBM",
                     "Penyaluran BBM",
                     "Pekerjaan Penyiapan dan Pematangan Tanah",
                 ].map((item, index) => {
